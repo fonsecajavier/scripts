@@ -1,0 +1,45 @@
+[user]
+  name = Javier Fonseca V.
+  email = fonsecajavier@gmail.com
+
+[color]
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[alias]
+  st      = status
+  sh      = stash
+  sp      = stash pop
+  ci      = commit
+  cm      = commit -m
+  cam     = commit --amend
+  br      = branch
+  co      = checkout
+  df      = diff
+  lg      = log -p
+  pr      = pull --rebase
+  pullom  = pull origin master
+  pushom  = push origin master
+[heroku]
+	account = work
+[diff]
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+	trustExitCode = true
