@@ -5,9 +5,11 @@
 # Load the default .profile
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
-# Add Postgres.app bins to the $PATH.  Make sure to double check this path
-# exists.  Otherwise use the official Postgres.app documentation for CLI-tools
+# Add Postgres.app and mysql bins to the $PATH.  Make sure to double check this path
+# exists.  Otherwise use the official Postgres.app/MySQL documentation for CLI-tools
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+export PATH=$PATH:/usr/local/mysql/bin
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH # required for the ruby gem to work
 
 # Add /usr/local/bin to the $PATH so that brew installed programs can
 # be run from everywhere.  Make sure to put it at the bottom of all $PATH
