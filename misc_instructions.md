@@ -47,3 +47,19 @@ sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysql.plist
 ```
 
 Then it will load on a restart.
+
+Fixing HTTPS SSL cert issues on old NPM
+=======================================
+
+If you're installing an old Node.js version (such as 0.8.7), most probably you'll have to upgrade NPM in order to avoid those SSL issues:
+
+```
+# Do this first, or the upgrade will fail (disables SSL cert checks)
+npm config set ca ""
+
+# Actual upgrade
+npm install npm -g
+
+# Undo the previous config change
+npm config delete ca
+```
