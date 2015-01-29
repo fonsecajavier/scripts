@@ -63,3 +63,10 @@ npm install npm -g
 # Undo the previous config change
 npm config delete ca
 ```
+
+Install Xcode command line tools
+=================================
+
+That will set up some libraries required for building some native extensions (nokogiri for example)
+
+```xcode-select --install```
