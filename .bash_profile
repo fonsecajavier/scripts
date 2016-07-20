@@ -33,3 +33,8 @@ searchAndDestroy(){
   fi
   lsof -i TCP:$1 | awk '/LISTEN/{print $2}' | xargs kill -9
 }
+
+# Download .git-completion.bash from https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
+if [ -f ~/.git-completion.bash  ]; then
+  . ~/.git-completion.bash
+fi
