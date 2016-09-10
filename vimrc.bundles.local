@@ -1,0 +1,6 @@
+" For some reason the next statement needs to go here with the bundles in order to be executed correctly
+let g:spf13_no_autochdir = 1
+
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ngmy/vim-rubocop'
+Plugin 'thoughtbot/vim-rspec'

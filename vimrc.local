@@ -1,0 +1,17 @@
+" Fix for neocomplete misbehavior <Plug>(neosnippet_expand)
+inoremap <expr><CR> neosnippet#expandable() ? neosnippet#mappings#expand_or_jump_impl() : pumvisible() ? neocomplete#close_popup() : "\<CR>"
+
+" Fix lag when moving around the cursor
+set re=1
+set ttyfast
+set lazyredraw
+
+set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
+
+set relativenumber
+
+let g:rspec_runner = "os_x_iterm2"
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
