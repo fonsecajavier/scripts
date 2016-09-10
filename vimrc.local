@@ -15,3 +15,9 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+let NERDTreeShowLineNumbers=1
+
+let g:airline_section_b = airline#section#create(['hunks']) " displays hunks without current branch ('branch')
+let g:airline_section_c = airline#section#create(['file', ' ', 'readonly']) " displays relative path without bufferline ('%<')
+
