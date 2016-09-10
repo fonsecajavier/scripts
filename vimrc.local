@@ -10,14 +10,18 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
 
 set relativenumber
 
-let g:rspec_runner = "os_x_iterm2"
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+" janko-m/vim-test
+" runs vim-test via Dispatch, asynchronously
+let test#strategy = "dispatch"
+" enables :RSpec runner command, useful for first test run.  Remember to use the expansion for the current file :RSpec %
+let g:test#runner_commands = ['RSpec']
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
 
 let NERDTreeShowLineNumbers=1
 
 let g:airline_section_b = airline#section#create(['hunks']) " displays hunks without current branch ('branch')
 let g:airline_section_c = airline#section#create(['file', ' ', 'readonly']) " displays relative path without bufferline ('%<')
-
