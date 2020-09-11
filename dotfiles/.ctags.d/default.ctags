@@ -1,0 +1,13 @@
+# Remember that Universal-ctags supports comments like this!
+-R
+--fields=+l
+--exclude=.svn
+--exclude=.bundle
+--exclude=.git
+--exclude=node_modules
+--exclude=log
+--exclude=tmp
+--exclude=*.pyc
+--exclude=*.pyo
+--exclude=*.min.*
+--exclude=coverage
