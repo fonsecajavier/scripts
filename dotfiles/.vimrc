@@ -41,7 +41,8 @@ Plugin 'vim-airline/vim-airline' " fancy statusline
 Plugin 'vim-airline/vim-airline-themes' " themes for vim-airline
 Plugin 'othree/yajs.vim' " Yet Another JavaScript Syntax
 Plugin 'maxmellon/vim-jsx-pretty' " React.js syntax highlighting and indenting
-Plugin 'Yggdroot/indentLine' " display thin vertical lines at each indentation
+Plugin 'HerringtonDarkholme/yats.vim' " Syntax highlighting for TSX (JSX in Typescript). Requires 'maxmellon/vim-jsx-pretty'
+Plugin 'Yggdroot/indentLine' " display thin vertical lines at each indentation ---------- DISABLE IF JSON FILES GET QUOTES MESSED UP
 Plugin 'prettier/vim-prettier' " a VIM plugin for prettier (JS formatter). Make sure to first `npm install -g prettier`
 
 " Plugin 'sheerun/vim-polyglot' " Supports a wide selection of languages in VIM. You might need to disable the ones you already added separately, for example: let g:polyglot_disabled = ['css']
@@ -101,6 +102,7 @@ set undofile
 " Begin ripgrep (search in files)
 let g:ctrlsf_default_view_mode = 'compact'
 let g:ctrlsf_auto_focus = { "at": "start" }
+let g:ctrlsf_ignore_dir = ['bower_components', 'node_modules', 'public/ckeditor']
 " End ripgrep
 
 " Map some common typos :)
