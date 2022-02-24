@@ -129,6 +129,14 @@ searchAndDestroy(){
   lsof -i TCP:$1 | awk '/LISTEN/{print $2}' | xargs kill -9
 }
 
+sudoSearchAndDestroy(){
+  # kill processes on some tcp port:
+  if [ -z "$1" ]; then
+      echo "Usage: searchAndDestroy [numeric port identifier]" >&2
+      return 1
+  fi
+  sudo lsof -i TCP:$1 | awk '/LISTEN/{print $2}' | xargs kill -9
+}
 alias rake='noglob rake' # prevents "zsh: no matches found: task[param]" not found error when passing parameters to ruby rake tasks
 
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES # fixes fork related problems with Puma and other web servers
