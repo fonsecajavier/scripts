@@ -75,6 +75,18 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Python 2 was deprecated from macOS 12.3 (Monterey), but some scripts and commands
+# will still require the `python` (Python 2) command to exist, for example:
+# zsh-git-prompt - git_super_status
+#
+# If you want Python 2 installed again for maximum compatibility, you can do so via
+# `pyenv` and symlinks. Please follow the instructions from:
+# https://www.alfredapp.com/help/kb/python-2-monterey/
+#
+# In the other side, if you don't want to install that old version of Python, you could
+# could try to alias the `python` command with the `python3` binary from Homebrew:
+# alias python=/usr/local/bin/python3
+
 source ~/.zsh/zsh-git-prompt/zshrc.sh
 PROMPT='%B%m%~%b$(git_super_status) %# '
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
