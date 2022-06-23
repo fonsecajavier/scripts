@@ -160,3 +160,6 @@ alias vi="nvim"
 alias oldvim="vim"
 
 export EDITOR="nvim"
+
+# Some libraries/versions such as node-gpy require python 2 to be available
+export npm_config_python=`which python`
