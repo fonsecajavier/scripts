@@ -44,6 +44,7 @@ Plugin 'maxmellon/vim-jsx-pretty' " React.js syntax highlighting and indenting
 Plugin 'HerringtonDarkholme/yats.vim' " Syntax highlighting for TSX (JSX in Typescript). Requires 'maxmellon/vim-jsx-pretty'
 Plugin 'Yggdroot/indentLine' " display thin vertical lines at each indentation ---------- DISABLE IF JSON FILES GET QUOTES MESSED UP
 Plugin 'prettier/vim-prettier' " a VIM plugin for prettier (JS formatter). Make sure to first `npm install -g prettier`
+Plugin 'tpope/vim-cucumber' " syntax higlighting for Cucumber .feature files
 
 " Plugin 'sheerun/vim-polyglot' " Supports a wide selection of languages in VIM. You might need to disable the ones you already added separately, for example: let g:polyglot_disabled = ['css']
 " Plugin 'jiangmiao/auto-pairs' " inserts quotes and parenthesis in pairs as you type. DISABLED because it messes up with my typing flow
